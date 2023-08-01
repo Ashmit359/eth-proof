@@ -34,8 +34,7 @@ Problem Statement :
    
 ![255328480-5b74c801-62e8-47d0-ba8d-732d07ec02e1](https://github.com/Ashmit359/eth-proof/assets/119657904/4e3a6552-5975-4819-a474-9220237e3bec)
 
-Code:
-
+> Code:
    SPDX-License-Identifier: MIT
    pragma solidity 0.8.18;
    contract MyToken {
@@ -44,25 +43,17 @@ Code:
 string public tokenName = "TOKEN";
 string public tokenAbbrv = "TKN";
 uint public totalSupply = 0;
-
 // mapping variable here
-
 mapping(address => uint) public balances;
-
 // mint function
-
 function mint (address _address, uint _value) public {
     totalSupply += _value;
     balances[_address] += _value;
 }
-
 // burn function
-
 function burn (address _address, uint _value) public {
     if(balances[_address]>= _value){
     totalSupply -= _value;
     balances[_address] -= _value;
     }
-}
-
 }
